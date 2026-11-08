@@ -11,7 +11,7 @@ export default function RegexRecognizerForm({ recognizer }) {
     alphabetErrors,
     expression,
     word,
-    validationErrors,
+    expressionErrors,
     isExpressionValid,
     canValidateExpression,
     canBuildAutomate,
@@ -40,7 +40,7 @@ export default function RegexRecognizerForm({ recognizer }) {
         <RegularExpressionInputField
           value={expression}
           onChange={changeExpression}
-          errors={validationErrors}
+          errors={expressionErrors}
           isValid={isExpressionValid}
         />
 
