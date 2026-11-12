@@ -12,7 +12,7 @@ export default function RecognizerPage() {
       <ApplicationHeader />
       <main className="grid flex-1 grid-cols-1 md:grid-cols-[330px_1fr]">
         <RegexRecognizerForm recognizer={recognizer} />
-        <AutomateResultPanel />
+        <AutomateResultPanel recognizer={recognizer} />
       </main>
     </div>
   );

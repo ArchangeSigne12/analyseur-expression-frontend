@@ -22,6 +22,7 @@ export default function RegexRecognizerForm({ recognizer }) {
     validateExpression,
     buildAutomate,
     testWord,
+    actionError,
   } = recognizer;
 
   return (
@@ -64,6 +65,12 @@ export default function RegexRecognizerForm({ recognizer }) {
         <FormActionButton onClick={testWord} disabled={!canTestWord}>
           Tester le mot
         </FormActionButton>
+
+         {actionError && (
+          <p role="alert" className="text-xs text-red-700">
+            ✕ {actionError}
+          </p>
+        )}
       </form>
     </aside>
   );
