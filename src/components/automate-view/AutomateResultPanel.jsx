@@ -4,6 +4,7 @@ import AutomateDiagram from "./AutomateDiagram";
 import AutomatePlaceholderMessage from "./AutomatePlaceholderMessage";
 import AutomateViewTabs from "./AutomateViewTabs";
 import TransitionTableView from "./TransitionTableView";
+import TraversedPathPanel from "../path-trace/TraversedPathPanel";
 
 const TABS = [
   { id: "afdMinimal", label: "AFD minimal" },
@@ -66,6 +67,8 @@ export default function AutomateResultPanel({ recognizer }) {
           <TransitionTableView automate={automate.afdMinimal} />
         )}
       </div>
+      {testResult && <TraversedPathPanel testResult={testResult} />}
+
     </section>
   );
 }
